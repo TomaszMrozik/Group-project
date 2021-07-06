@@ -1,3 +1,3 @@
-#Projekt grupowy realizowany w czasie kursu
+#Group project which was realized during programming course.
 
-Projkt realizowany był 5 dni w trzy osobowej grupie kursantów. Realizacja projektu odbywała się zgodnie z metodyką SCRUM.
+The project was being realized in 5 days in a 3 person group of course members. It was realized according to the SCRUM methodology.
