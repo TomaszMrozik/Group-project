@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Zaplanuj Jedzonko</title><!--    Google Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
+          rel="stylesheet">
+    <!--    Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+          integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <!--    Style-->
+    <link rel="stylesheet" href="./css/main.css"/>
+</head>
+<body>
+<header class="app__header">
+    <h1 class="logo">Zaplanuj <span class="logo__color">Jedzonko</span></h1>
+    <nav class="app__nav">
+        <span id="user__name"></span><i class="far fa-user-circle"></i>
+    </nav>
+</header>
+<main class="app__main">
+    <nav class="app__menu">
+        <ul>
+            <li><a href="app.html">Pulpit</a></li>
+            <li><a href="recipes.html">Przepisy</a></li>
+            <li><a href="schedules.html">Plany</a></li>
+        </ul>
+    </nav>
+    <section class="app__desktop">
+        <form class="form__cell app__form">
+            <h1>Witaj,</h1>
+            <h2>Wygląda na to że jesteś tutaj <br> pierwszy raz !</h2>
+            <input class="userName" placeholder="tutaj wpisz jak masz na imię">
+            <button class="btn form__button">Gotowe!</button>
+            <p>Podaj nam swoje imię, a my zorganizujemy <br> dla Ciebie najlepszą aplikację :)</p>
+        </form>
+  
+        <div class="widget widget__add">
+            <div class="widget__double widget__recipe">
+                <span id="widget-add-recipe" class="far fa-plus-square fa-4x"></span>
+
+                <p>dodaj przepis</p>
+            </div>
+            <div class="widget__double widget__plan">
+                <span id="widget-add-plan" class="far fa-plus-square fa-4x"></span>
+                <p>dodaj plan</p>
+            </div>
+        </div>
+        <div class="app__widget">
+            <div class="app__widget--message info">
+                <i class="fas fa-info-circle"></i> <span class="app__widget--message--text"></span><i id="info" class="close fas fa-window-close"></i>
+            </div>
+            <div class="app__widget--message exclamation">
+                <i class="fas fa-exclamation-circle"></i> <span class="app__widget--message--text">Pamiętaj, by dodać plan!</span><i id="exclamation" class="close fas fa-window-close"></i>
+            </div>
+            <div class="app__widget--message success">
+                <i class="fas fa-check-circle"></i> <span class="app__widget--message--text">Świetnie, że jesteś! Udanego planowania i smacznego! :)</span><i id="success" class="close fas fa-window-close"></i>
+            </div>
+        </div>
+        <!--        trzeba poprawić pozycję tabeli w gridzie względem widgetów-->
+        <div class="app__calendar">
+            <h2>Twój plan na <span id="weekNumber"></span> tydzień:</h2>
+            <table class="app__calendar_table">
+                <thead>
+                <tr class="table__days">
+                    <th>Poniedziałek</th>
+                    <th>Wtorek</th>
+                    <th>Środa</th>
+                    <th>Czwartek</th>
+                    <th>Piątek</th>
+                    <th>Sobota</th>
+                    <th>Niedziela</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>śniadanie</td>
+                    <td>śniadanie</td>
+                    <td>śniadanie</td>
+                    <td>śniadanie</td>
+                    <td>śniadanie</td>
+                    <td>śniadanie</td>
+                    <td>śniadanie</td>
+                </tr>
+                <tr>
+                    <td>drugie śniadanie</td>
+                    <td>drugie śniadanie</td>
+                    <td>drugie śniadanie</td>
+                    <td>drugie śniadanie</td>
+                    <td>drugie śniadanie</td>
+                    <td>drugie śniadanie</td>
+                    <td>drugie śniadanie</td>
+                </tr>
+                <tr>
+                    <td>zupa</td>
+                    <td>zupa</td>
+                    <td>zupa</td>
+                    <td>zupa</td>
+                    <td>zupa</td>
+                    <td>zupa</td>
+                    <td>zupa</td>
+                </tr>
+                <tr>
+                    <td>drugie danie</td>
+                    <td>drugie danie</td>
+                    <td>drugie danie</td>
+                    <td>drugie danie</td>
+                    <td>drugie danie</td>
+                    <td>drugie danie</td>
+                    <td>drugie danie</td>
+                </tr>
+                <tr>
+                    <td>kolacja</td>
+                    <td>kolacja</td>
+                    <td>kolacja</td>
+                    <td>kolacja</td>
+                    <td>kolacja</td>
+                    <td>kolacja</td>
+                    <td>kolacja</td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="button__switch">
+                <button class="button__table button__previous">poprzedni</button>
+                <button class="button__table button__next">następny</button>
+            </div>
+        </div>
+      
+<!--        poniższy formularz ma klasę hidden, której usunięcie spowoduje pojawienie się go powyżej pozostałych elementów w app desktop -->
+        <form id="recipe-form" class="app__desktop__add__recipe hidden">
+            <div class="app__desktop__add__recipe__header">
+                <h2>NOWY PRZEPIS</h2>
+                <div>
+                    <button id="cancel-recipe" type="button">Anuluj</button>
+                    <button id="save-recipe" type="submit">Zapisz i zamknij</button>
+                </div>
+            </div>
+            <hr/>
+            <div class="app__dektop__input__group">
+                <label for="recipe-name">Nazwa przepisu</label>
+                <input id="recipe-name" type="text" placeholder="Podaj nazwę przepisu"/><span id="recipe-name-warning" class="warning hidden">Nazwa przepisu musi mieć między 2 a 50 znaków</span>
+                <label for="recipe-description">Opis przepisu</label>
+                <textarea id="recipe-description" placeholder="Opisz swój przepis"></textarea><span id="recipe-description-warning" class="warning hidden">Opis musi mieć między 10 a 360 znaków</span>
+            </div>
+            <div class="app__desktop__add__recipe__body">
+                <div class="app__desktop__add__recipe__body--instructions">
+                    <h3>INSTRUKCJE</h3><span id="recipe-instruction-warning" class="warning hidden">Instrukcja musi mieć między 5 a 50 znaków</span>
+                    <hr/>
+                    <textarea id="recipe-instruction" placeholder="Wpisz instrukcje krok po kroku"></textarea>
+                    <i id="recipe-instruction-add" class="fas fa-plus-square"></i>
+                    <ol id="instructions-list" class="app__desktop__add__recipe__body--list">
+
+                     </ol>
+                </div>
+                <div class="app__desktop__add__recipe__body--instructions">
+                    <h3>SKŁADNIKI</h3><span id="recipe-ingredient-warning" class="warning hidden">Składnik mieć między 2 a 150 znaków</span>
+                    <hr/>
+                    <textarea id="recipe-ingredients" placeholder="Podaj potrzebne składniki"></textarea>
+                    <i id="recipe-ingredients-add" class="fas fa-plus-square"></i>
+                    <ul id="ingredients-list" class="app__desktop__add__recipe__body--list">
+
+                    </ul>
+                </div>
+            </div>
+        </form>
+    </section>
+
+
+
+    <form id="plan-form" class="new_plan hidden">
+        <div class="head_new_plan container_new_plan">
+            <p>NOWY PLAN</p>
+            <div>
+                <button id="cancel-plan" type="button">Anuluj</button>
+                <button id="save-plan" type="submit">Zapisz i zamknij</button>
+            </div>
+        </div>
+        <div class="new_plan_description">
+            <div>
+                <label for="plan-name">Nazwa planu</label>
+                <input type="text" id="plan-name" placeholder="Wpisz nazwę planu">
+            </div>
+            <div>
+                <label for="plan-description">Opis planu</label>
+                <textarea type="" id="plan-description" placeholder="Wpisz opis planu"></textarea>
+            </div>
+            <div>
+                <label for="week-number">Numer tygodnia</label>
+                <input type="number" min="1" id="week-number">
+            </div>
+        </div>
+
+        <div class="week-days">
+            <p>ŚNIADANIE</p>
+            <p>DRUGIE<br>ŚNIADANIE</p>
+            <p>ZUPA</p>
+            <p>DRUGIE<br>DANIE</p>
+            <p>KOLACJA</p>
+        </div>
+
+        <div class="dayz">
+            <div class="mon">
+                <p>PONIEDZIAŁEK</p>
+                <div class="slct">
+                    <select name="mon-1">
+                        <option value="burger">burger</option>
+                        <option value="zupa">zupa</option>
+                    </select>
+                    <select name="mon-2">
+                        <option>burger</option>
+                        <option>zupa</option>
+                    </select>
+                    <select>
+                        <option>burger</option>
+                        <option>zupa</option>
+                    </select>
+                    <select>
+                        <option>burger</option>
+                        <option>zupa</option>
+                    </select>
+                    <select>
+                        <option>burger</option>
+                        <option>zupa</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="tues">
+                <p>WTOREK</p>
+                <div class="slct">
+                    <select>
+                        <option>burger</option>
+                        <option>zupa</option>
+                    </select>
+                    <select>
+                        <option>burger</option>
+                        <option>zupa</option>
+                    </select>
+                    <select>
+                        <option>burger</option>
+                        <option>zupa</option>
+                    </select>
+                    <select>
+                        <option>burger</option>
+                        <option>zupa</option>
+                    </select>
+                    <select>
+                        <option>burger</option>
+                        <option>zupa</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="wed">
+                <p>ŚRODA</p>
+                <div class="slct">
+                    <select>
+                        <option>burger</option>
+                        <option>zupa</option>
+                    </select>
+                    <select>
+                        <option>burger</option>
+                        <option>zupa</option>
+                    </select>
+                    <select>
+                        <option>burger</option>
+                        <option>zupa</option>
+                    </select>
+                    <select>
+                        <option>burger</option>
+                        <option>zupa</option>
+                    </select>
+                    <select>
+                        <option>burger</option>
+                        <option>zupa</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="thur">
+                <p>CZWARTEK</p>
+                <div class="slct">
+                    <select>
+                        <option>burger</option>
+                        <option>zupa</option>
+                    </select>
+                    <select>
+                        <option>burger</option>
+                        <option>zupa</option>
+                    </select>
+                    <select>
+                        <option>burger</option>
+                        <option>zupa</option>
+                    </select>
+                    <select>
+                        <option>burger</option>
+                        <option>zupa</option>
+                    </select>
+                    <select>
+                        <option>burger</option>
+                        <option>zupa</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="fri">
+                <p>PIĄTEK</p>
+                <div class="slct">
+                    <select>
+                        <option>burger</option>
+                        <option>zupa</option>
+                    </select>
+                    <select>
+                        <option>burger</option>
+                        <option>zupa</option>
+                    </select>
+                    <select>
+                        <option>burger</option>
+                        <option>zupa</option>
+                    </select>
+                    <select>
+                        <option>burger</option>
+                        <option>zupa</option>
+                    </select>
+                    <select>
+                        <option>burger</option>
+                        <option>zupa</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="sat">
+                <p>SOBOTA</p>
+                <div class="slct">
+                    <select>
+                        <option>burger</option>
+                        <option>zupa</option>
+                    </select>
+                    <select>
+                        <option>burger</option>
+                        <option>zupa</option>
+                    </select>
+                    <select>
+                        <option>burger</option>
+                        <option>zupa</option>
+                    </select>
+                    <select>
+                        <option>burger</option>
+                        <option>zupa</option>
+                    </select>
+                    <select>
+                        <option>burger</option>
+                        <option>zupa</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="sun">
+                <p>NIEDZIELA</p>
+                <div class="slct">
+                    <select>
+                        <option>burger</option>
+                        <option>zupa</option>
+                    </select>
+                    <select>
+                        <option>burger</option>
+                        <option>zupa</option>
+                    </select>
+                    <select>
+                        <option>burger</option>
+                        <option>zupa</option>
+                    </select>
+                    <select>
+                        <option>burger</option>
+                        <option>zupa</option>
+                    </select>
+                    <select>
+                        <option>burger</option>
+                        <option>zupa</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+
+</main>
+<script src="./js/app.js"></script>
+</body>
+</html>

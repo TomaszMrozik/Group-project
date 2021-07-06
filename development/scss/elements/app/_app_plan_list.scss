@@ -1,0 +1,126 @@
+.app__plan{
+  width: 85%;
+  background-image: url("../assets/background.png");
+  position: relative;
+}
+
+.plan__list {
+  position: absolute;
+  background-color: $color-background;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: calc(100vh - 13rem);
+  width: 85%;
+  border: 2px dotted $color-table;
+
+  &--title {
+    display: flex;
+    width: 95%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 20px;
+    border-bottom: 1px solid $color-table;
+
+    h2 {
+      color: $color-accent;
+      font-size: 20px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    i {
+      color: $color-success;
+      cursor: pointer;
+    }
+  }
+
+  hr {
+    border: none;
+  }
+
+  &--table {
+    display: block;
+    color: $color-table;
+    width: 90%;
+    margin: 0 auto;
+    height: 75%;
+
+    th, td {
+      padding: 10px 0;
+      font-weight: 700;
+      text-align: left;
+      border-bottom: 1px solid $color-table;
+      width: 300px;
+    }
+
+    tbody {
+      display: block;
+      height: 100%;
+      overflow-y: auto;
+
+      .plan__edit {
+        color: $color-warning;
+        cursor: pointer;
+      }
+
+      .plan__remove {
+        color: $color-bin;
+        margin-left: 10px;
+        cursor: pointer;
+      }
+
+      td:first-child{
+        width: 100px;
+      }
+
+      td:nth-child(2){
+        width: 200px;
+      }
+
+      td:nth-child(3){
+        width: 450px;
+      }
+
+      td:nth-child(4){
+        width: 100px;
+      }
+
+      td:last-child{
+        width: 60px;
+      }
+    }
+
+    thead tr{
+      display: block;
+      width: 100%;
+
+      th {
+        color: $color-nav;
+        font-size: 16px;
+        border-top: 1px solid $color-table;
+      }
+
+      th:first-child{
+        width: 100px;
+      }
+
+      th:nth-child(2){
+        width: 200px;
+      }
+
+      th:nth-child(3){
+        width: 450px;
+      }
+
+      th:nth-child(4){
+        width: 100px;
+      }
+
+      th:last-child{
+        width: 80px;
+      }
+    }
+  }
+
+}

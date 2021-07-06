@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Zaplanuj Jedzonko</title><!--    Google Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
+          rel="stylesheet">
+    <!--    Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+          integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <!--    Style-->
+    <link rel="stylesheet" href="./css/main.css"/>
+</head>
+<body>
+<header class="app__header">
+    <h1 class="logo">Zaplanuj <span class="logo__color">Jedzonko</span></h1>
+    <nav class="app__nav">
+        <span id="user__name">Imię</span><i class="far fa-user-circle"></i>
+    </nav>
+</header>
+<main class="app__main">
+    <nav class="app__menu">
+        <ul>
+            <li><a href="app.html">Pulpit</a></li>
+            <li><a href="recipes.html">Przepisy</a></li>
+            <li><a href="schedules.html">Plany</a></li>
+        </ul>
+    </nav>
+    <section class="app__recipe">
+        <div class="recipe__list">
+            <div class="recipe__list--title">
+                <h2>Lista przepisów</h2>
+                <i class="fas fa-plus-square fa-2x"></i>
+            </div>
+            <hr>
+            <table class="recipe__list--table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>NAZWA</th>
+                        <th>OPIS</th>
+                        <th>AKCJE</th>
+                    </tr>
+                </thead>
+                <tbody id="allRecipes">
+<!--                import z local storage-->
+                </tbody>
+            </table>
+        </div>
+    </section>
+</main>
+<script src="./js/recipe.js"></script>
+</body>
+</html>

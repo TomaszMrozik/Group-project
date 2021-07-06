@@ -1,0 +1,27 @@
+.about__cell{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 3rem 0;
+
+  .about__text {
+    max-width: 25rem;
+    margin-left: 6.25rem;
+
+    h3 {
+      font-size: 1.5rem;
+      padding-bottom: 1.25rem;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.2rem;
+    }
+  }
+
+  .about__image{
+    width: 12.5rem;
+    height: 12.5rem;
+    background-color: $color-header;
+  }
+}

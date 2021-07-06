@@ -1,0 +1,30 @@
+
+  .carousell__cell {
+    padding: 2rem 10rem;
+    width: 100%;
+    text-align: center;
+    h2 {
+      font-size: 3rem;
+      padding: 2rem;
+    }
+    p {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+  }
+
+  .flickity-button {
+    background: none;
+
+    &:hover {
+      background: none;
+    }
+
+    .flickity-button-icon {
+      color: $color-nav;
+
+      &:hover {
+        color: $color-header;
+      }
+    }
+  }

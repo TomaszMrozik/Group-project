@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Zaplanuj Jedzonko</title>
+    <!--    Google Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
+          rel="stylesheet">
+    <!--    Font Awesome-->
+    <script src="https://kit.fontawesome.com/b282f36c60.js" crossorigin="anonymous"></script>
+    <!--    Flickity - carousel-->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <!--    Style -->
+    <link rel="stylesheet" href="./css/main.css"/>
+    <script src="../webpack.config.js"></script>
+</head>
+<body>
+<header>
+    <h1 class="logo">Zaplanuj <span class="logo__color">Jedzonko</span></h1>
+    <nav>
+        <ul>
+            <li><a href="app.html">Zaplanuj posiłki!</a></li>
+            <li><a href="#features">Dlaczego warto?</a></li>
+            <li><a href="#about">O mnie</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section id="carousel">
+        <div class="carousell__cell">
+            <h2>Lorem Ipsum</h2>
+            <p>Aenean porttitor justo eu est rutrum, vel bibendum sem viverra. Etiam placerat bibendum libero, sed
+                tincidunt purus egestas ut. Fusce porta auctor aliquam. Nulla posuere libero et facilisis dapibus.
+                Phasellus condimentum ultricies lectus, vitae aliquet neque vehicula a. Donec sit amet pharetra arcu.
+                Nam luctus consectetur massa, eu auctor erat sollicitudin sed. Donec ullamcorper lobortis diam, ac
+                ornare libero viverra vitae. Curabitur vitae tempor orci. Donec vitae nisl gravida, gravida enim id,
+                efficitur erat. Cras nunc magna, sodales id ullamcorper nec, tristique sed erat. Integer sagittis neque
+                id porttitor rutrum. Etiam et rutrum justo. Mauris et malesuada nulla. Etiam malesuada est non cursus
+                laoreet.</p>
+        </div>
+        <div class="carousell__cell">
+            <h2>Neque porro quisquam</h2>
+            <p>Ut et dolor convallis, pellentesque nisi non, semper lorem. Nam in cursus metus, eu lobortis tortor.
+                Proin scelerisque leo malesuada blandit scelerisque. Interdum et malesuada fames ac ante ipsum primis in
+                faucibus. Nunc mauris nisl, vulputate a congue id, semper sit amet eros. Quisque sagittis tellus mauris,
+                a tincidunt sem malesuada a. Curabitur lacinia erat nec mollis luctus. Nullam lobortis odio sapien.
+                Proin commodo, turpis id vestibulum facilisis, arcu lectus ultricies est, ac consectetur erat massa a
+                tortor. Fusce pharetra pretium consectetur.</p></div>
+        <div class="carousell__cell">
+            <h2>Etiam quis libero ultricies</h2>
+            <p>Maecenas sollicitudin ex felis, sed dapibus leo aliquam eget. Nullam dictum quis lorem dictum tempor.
+                Nulla vestibulum consectetur mi, nec pellentesque nisl venenatis nec. Donec finibus neque ut
+                pellentesque accumsan. Fusce non est rutrum, molestie mauris id, fringilla arcu. Donec feugiat gravida
+                porttitor. Curabitur sit amet elit sapien. Morbi in iaculis eros. Cras fringilla nunc id leo convallis,
+                nec sollicitudin tortor pharetra. Suspendisse nisi nibh, aliquam gravida purus vitae, aliquet
+                condimentum leo. Nam tincidunt, mi eget aliquam laoreet, sem quam placerat risus, ut aliquet tortor
+                ligula et mauris. Donec tortor ipsum, porta ac libero at, tempus facilisis ante. Donec pharetra urna
+                ipsum, ullamcorper pulvinar erat eleifend sit amet. Etiam quis libero ultricies, malesuada leo porta,
+                luctus sapien. Nullam ut accumsan risus, vitae imperdiet augue.</p>
+        </div>
+    </section>
+    <section id="call" class="call__cell">
+        <div class="call__text">
+            <h3>Lorem ipsum dolor sit amet</h3>
+            <p> placerat bibendum libero, sed tincidunt purus egestas ut ed dapibus leo aliquam eget.</p>
+        </div>
+        <div>
+            <button class="btn call__button"><a href="index.html">Lorem ipsum</a></button>
+        </div>
+    </section>
+
+
+    <section id="features" class="container">
+        <div class="feature">
+            <i class="fas fa-check"></i>
+            <h3>Lorem ipsum dolor sit amet</h3>
+            <p>Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit.
+                Aliquam erat volutpat.
+                Donec placerat nisl magna,
+                et faucibus arcu
+                condimentum sed.</p>
+        </div>
+        <div class="feature">
+            <i class="fas fa-clock"></i>
+            <h3>Lorem ipsum dolor sit amet</h3>
+            <p>Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit.
+                Aliquam erat volutpat.
+                Donec placerat nisl magna,
+                et faucibus arcu
+                condimentum sed.</p>
+        </div>
+        <div class="feature">
+            <i class="fas fa-list"></i>
+            <h3>Lorem ipsum dolor sit amet</h3>
+            <p>Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit.
+                Aliquam erat volutpat.
+                Donec placerat nisl magna,
+                et faucibus arcu
+                condimentum sed.</p>
+        </div>
+    </section>
+
+
+
+    <section class="newsletter">
+        <!-- newsletter -->
+        <div class="container">
+            <h3>Lorem ipsum dolor sit amet</h3>
+            <div>
+                <form>
+                    <input id='email' type="email" name="email"><button id='sub-btn' type="submit"  value="Lorem">Lorem</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="about" class="about__cell">
+        <div class="about__image"></div>
+        <div class="about__text">
+            <h3>Lorem ipsum dolor sit amet</h3>
+            <p>Ut et dolor convallis, pellentesque nisi non, semper lorem. Nam in cursus metus, eu lobortis tortor.
+                Proin scelerisque leo malesuada blandit scelerisque. Interdum et malesuada fames ac ante ipsum primis in
+                faucibus.</p>
+        </div>
+    </section>
+    <section id="contact">
+        <!-- three columns -->
+    </section>
+</main>
+<footer id="footer" class="footer__cell">
+    <div class="footer__info">
+        <div class="footer__text">
+            <h3>Lorem Ipsum Dolor</h3>
+            <p>Aenean porttitor justo eu est rutrum, vel bibendum sem viverra. Etiam placerat bibendum libero, sed
+                tincidunt purus egestas ut. Fusce porta auctor aliquam.</p>
+        </div>
+        <div class="footer__list">
+            <h3>Lorem Ipsum Dolor</h3>
+            <ul>
+                <li class="list__item">Aenean porttitor justo</li>
+                <li class="list__item">vel bibendum sem viverra</li>
+                <li class="list__item"> Phasellus condimentum ultricies</li>
+                <li class="list__item">Fusce porta auctor</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Lorem Ipsum Dolor</h3>
+            <div class="footer__form">
+                <input class="footer__input"><button class="btn footer__button">Lorem</button>
+            </div>
+            <div class="footer__icons">
+                <a href="" class="facebook"><span class="fab fa-facebook-square fa-2x" style="color: #fff"></span></a>
+                <a href="" class="twitter"><span class="fab fa-twitter-square fa-2x" style="color: #fff"></span></a>
+                <a href="" class="instagram"><span class="fab fa-instagram fa-2x" style="color: #fff"></span></a>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright <a href="" class="copyrigth__link">ZaplanujJedzonko.pl</a></p>
+    </div>
+</footer>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script src="./js/index.js"></script>
+</body>
+</html>

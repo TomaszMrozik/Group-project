@@ -1,0 +1,37 @@
+.newsletter {
+  background-color: $color-nav;
+  height: 6rem;
+  width: 100%;
+  .container {
+    width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+    h3{
+      color: $color-background;
+      font-size: 1.8rem;
+      padding-top: 2rem;
+    }
+
+    form{
+      padding-top: 1.7rem;
+      border: none;
+      #email {
+        height: 2.4rem;
+        width: 20rem;
+        font-size: 1.2rem;
+        padding-left: 1rem;
+        box-shadow: inset 0 0 5px #000000;
+      }
+
+      #sub-btn{
+        height: 2.4rem;
+        width: 10rem;
+        background-color: $color-accent;
+        font-size: 1.2rem;
+        color: $color-background;
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+.app__widget {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  grid-area: widget;
+  .app__widget--message {
+    position: relative;
+    background-color: $color-background;
+    display: flex;
+    align-items: center;
+    margin: 1rem 0 0 1rem;
+    padding: 1.1rem;
+    padding-right: 2.3rem;
+    font-size: 1.2rem;
+    max-width: 100%;
+    border: 2px dotted transparent;
+    &.hidden {
+      display: none;
+    }
+    i {
+      font-size: 1.4rem;
+      margin-right: .8rem;
+      &.close {
+        position: absolute;
+        top: 5px;
+        right: calc(-.8rem + 5px);
+        font-size: 1.1rem;
+        &:hover {
+          color: $color-bin;
+          transform: translateY(.1rem) scale(95%);
+          cursor: pointer;
+        }
+      }
+    }
+
+    &.info {
+      color: $color-info;
+      border-color: $color-info;
+    }
+
+    &.exclamation {
+      color: $color-accent;
+      border-color: $color-accent;
+    }
+
+    &.success {
+      color: $color-success;
+      border-color: $color-success;
+    }
+  }
+}

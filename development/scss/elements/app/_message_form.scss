@@ -1,0 +1,44 @@
+.form__cell{
+  position: absolute;
+  background-color: $color-background;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: calc(100vh - 9rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 1.2rem;
+  z-index: 10;
+  width: 100%;
+
+  h1{
+    font-size: 1.875rem;
+  }
+
+  h2{
+    font-size: 1.25rem;
+    margin: 1.25rem 0;
+  }
+
+  input{
+    width: 15.625rem;
+    padding: 0.3125rem;
+  }
+
+  .form__button{
+    display: block;
+    margin: 0.625rem 0 1.25rem 0;
+    padding: 0.5rem 1rem;
+    background-color: $color-accent;
+    border: none;
+    color: $color-background;
+    cursor: pointer;
+  }
+
+  p{
+    font-size: 0.9375rem;
+  }
+}

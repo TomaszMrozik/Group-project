@@ -1,0 +1,37 @@
+header {
+  background-color: $color-header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5rem 8rem;
+  .logo {
+    font-family: $font-logo;
+    font-size: 3rem;
+    color: $color-background;
+    .logo__color {
+      color: $color-accent;
+      font-weight: 700;
+    }
+  }
+  ul {
+    display: flex;
+    align-items: center;
+    li {
+      padding: 1rem 2rem;
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      font-weight: 300;
+      &:last-of-type {
+        padding-right: 0;
+      }
+      a {
+        text-decoration: none;
+        color: $color-background;
+        transition: .4s;
+        &:hover {
+          color: $color-accent;
+        }
+      }
+    }
+  }
+}

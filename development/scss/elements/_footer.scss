@@ -1,0 +1,56 @@
+.footer__info {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  background-color: $color-nav;
+  color: $color-background;
+  padding: 1.875rem 0;
+
+  .footer__text {
+    max-width: 15.625rem;
+    line-height: 1.2rem;
+  }
+
+  h3 {
+    padding-bottom: 1.25rem;
+    font-size: 1.25rem;
+  }
+
+  .list__item {
+    margin-bottom: 0.625rem;
+    list-style-type: disc;
+  }
+
+  .footer__input {
+    max-width: 8.75rem;
+    border: none;
+    padding: 0.5rem 0;
+  }
+
+  .footer__button {
+    padding: 0.5rem 1rem;
+    background-color: $color-accent;
+    border: none;
+    color: $color-background;
+  }
+
+  .footer__icons {
+    padding-top: 1.25rem;
+
+    .twitter {
+      margin: 0 2.1875rem;
+    }
+  }
+
+  .copyright {
+    max-width: 100%;
+    background-color: $color-header;
+    text-align: center;
+    color: $color-background;
+    padding: 1.875rem 0;
+
+    .copyrigth__link {
+      text-decoration: none;
+      color: $color-accent;
+    }
+}}

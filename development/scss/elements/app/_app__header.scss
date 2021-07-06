@@ -1,0 +1,22 @@
+.app__header {
+  padding-left: 2rem;
+  height: 9rem;
+  box-shadow: 0 0 20px $color-header;
+  .logo {
+    font-size: 2rem;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+  }
+  span {
+    color: $color-background;
+    font-size: 2.5rem;
+    margin-right: 2rem;
+    font-weight: 600;
+  }
+  i {
+    color: $color-accent;
+    font-size: 3.5rem;
+  }
+}

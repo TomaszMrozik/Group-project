@@ -1,0 +1,1 @@
+const carousel = new Flickity('#carousel', {wrapAround: 'true', pageDots: false});
